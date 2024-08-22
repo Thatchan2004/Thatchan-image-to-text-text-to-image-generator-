@@ -17,14 +17,14 @@ def query_blip(image_data):
     return response.json()
 
 # App title
-st.title("AI-Powered Image Processing")
+st.title("Thatchan AI-Powered Image Processing")
 
 # Sidebar for selecting options
 option = st.sidebar.selectbox("Choose an option", ["Generate Image", "Caption Image"])
 
 # Option 1: Generate Image using Stable Diffusion
 if option == "Generate Image":
-    st.header("Generate Image with Stable Diffusion")
+    st.header("Generate Image with Text")
     prompt = st.text_input("Enter prompt")
     
     if st.button('Generate'):
@@ -37,7 +37,7 @@ if option == "Generate Image":
 
 # Option 2: Caption Image using BLIP
 elif option == "Caption Image":
-    st.header("Image Captioning with BLIP")
+    st.header("Image Captioning")
     
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
     
